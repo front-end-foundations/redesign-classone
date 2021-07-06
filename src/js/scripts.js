@@ -1,19 +1,19 @@
-document.addEventListener("submit", handleSubmit);
+// document.addEventListener("submit", handleSubmit);
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const formData = Object.fromEntries(new FormData(event.target))
-  console.log(" form data ", formData);
-  fetch(`http://localhost:3456/api`, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify(formData),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log("response from server", data));
-}
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const formData = Object.fromEntries(new FormData(event.target))
+//   console.log(" form data ", formData);
+//   fetch(`http://localhost:3456/api`, {
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     method: "POST",
+//     body: JSON.stringify(formData),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => console.log("response from server", data));
+// }
 
 
 document.addEventListener("click", clickHandlers);
